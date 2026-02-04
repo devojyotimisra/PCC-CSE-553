@@ -1,4 +1,4 @@
-**UML Assignments**
+# **UML Assignments**
 
 1. Design a UML Diagram for College Management System
 2. Design a UML Diagram for Hospital Management System
