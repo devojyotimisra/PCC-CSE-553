@@ -11,6 +11,7 @@ class Test2
 
         System.out.println("Inside test_package2 main()");
 
+        //the rest of the fucntions of the class ClassTest1 cannot be acessed here
         obj2.functionTest2();
         obj3.functionTest5();
     }
