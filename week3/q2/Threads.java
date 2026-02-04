@@ -7,14 +7,14 @@ class MyThreadOne extends Thread
         for(int i=0; i<100; i++)
         {
             System.out.println("Hi");
-            try
-            {
-                Thread.sleep(100);
-            }
-            catch(Exception e)
-            {
-                System.out.println(e);
-            }
+            // try
+            // {
+            //     Thread.sleep(100);
+            // }
+            // catch(Exception e)
+            // {
+            //     System.out.println(e);
+            // }
         }
     }
 }
@@ -26,14 +26,14 @@ class MyThreadTwo extends Thread
         for(int i=0; i<100; i++)
         {
             System.out.println("Hello");
-            try
-            {
-                Thread.sleep(100);
-            }
-            catch(Exception e)
-            {
-                System.out.println(e);
-            }
+            // try
+            // {
+            //     Thread.sleep(100);
+            // }
+            // catch(Exception e)
+            // {
+            //     System.out.println(e);
+            // }
         }
     }
 }
@@ -44,6 +44,24 @@ class Threads
     {
         Thread t1 = new MyThreadOne();
         Thread t2 = new MyThreadTwo();
+
+        System.out.println(t1.getName());
+        System.out.println(t2.getName());
+        
+        t1.setName("Arpit");
+        t2.setName("Soudip");
+        
+        System.out.println(t1.getName());
+        System.out.println(t2.getName());
+        
+        System.out.println(t1.getPriority());
+        System.out.println(t2.getPriority());
+        
+        t1.setPriority(Thread.MAX_PRIORITY);
+        t2.setPriority(Thread.MIN_PRIORITY);
+        
+        System.out.println(t1.getPriority());
+        System.out.println(t2.getPriority());
 
         t1.start();
         t2.start();

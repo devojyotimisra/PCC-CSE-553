@@ -9,7 +9,7 @@ class FileHandling
     public static void main(String args[]) throws Exception
     {
         File f = new File("demo.txt");
-        f.createNewFile();
+        if(!f.exists()) f.createNewFile();
         
         FileWriter w = new FileWriter(f);
         w.write("Hello World");

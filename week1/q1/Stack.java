@@ -1,6 +1,6 @@
 import java.util.*;
 
-class MyStack <T>
+class MyStack <T> 
 {
     private ArrayList<T> s = new ArrayList<>();
     
@@ -9,7 +9,7 @@ class MyStack <T>
         s.add(ele);
     }
 
-    public int isEmpty() throws Exception
+    private int isEmpty() throws Exception
     {
         if(s.size()!=0)
         {
@@ -61,6 +61,14 @@ class MyStack <T>
         }
         return null;
     }
+
+    public void display()
+    {
+        for(int i=s.size()-1;i>=0;i--)
+        {
+            System.out.print(s.get(i)+" ");
+        }
+    }
 }
 
 class Stack 
@@ -69,6 +77,12 @@ class Stack
     {
         MyStack<Integer> s = new MyStack<>();  
         s.peek();
-        
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        s.display();
+        s.peek();
+        s.pop();
+        s.peek();
     }
 }
