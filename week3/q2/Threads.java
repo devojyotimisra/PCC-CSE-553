@@ -40,7 +40,7 @@ class MyThreadTwo extends Thread
 
 class Threads
 {
-    public static void main()
+    public static void main(String args[])
     {
         Thread t1 = new MyThreadOne();
         Thread t2 = new MyThreadTwo();

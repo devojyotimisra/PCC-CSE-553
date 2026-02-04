@@ -1,3 +1,4 @@
+package Q3;
 // GATE Exam: 
 // Display the multiple choice questions and timer. 
 // Take input of answers from the user and finally show the result (marks obtained, correct, incorrect). 
