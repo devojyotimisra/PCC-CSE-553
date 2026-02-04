@@ -1,4 +1,3 @@
-package Q1;
 // Student Grading System: 
 // Display the grade of each student along with pass/fail of each subject. 
 // Take necessary input from the user. 
