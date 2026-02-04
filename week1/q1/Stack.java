@@ -9,13 +9,11 @@ class MyStack <T>
         s.add(ele);
     }
 
-    public T pop() throws Exception
+    public int isEmpty() throws Exception
     {
         if(s.size()!=0)
         {
-            T temp = s.get(s.size()-1);
-            s.remove(s.size()-1);
-            return temp;
+            return 0;
         }
         else
         {
@@ -23,19 +21,45 @@ class MyStack <T>
             throw e;
         }
     }
-    
-    public T top() throws Exception
+
+    public T pop()
     {
-        if(s.size()!=0)
+        int temp;
+        try
+        {
+            temp = isEmpty();
+        }
+        catch(Exception e)
+        {
+            temp = 1;
+            System.out.println(e.getMessage());
+        }
+        if(temp==0)
+        {
+            T t = s.get(s.size()-1);
+            s.remove(s.size()-1);
+            return t;
+        }
+        return null;
+    }
+    
+    public T peek()
+    {
+        int temp;
+        try
+        {
+            temp = isEmpty();
+        }
+        catch(Exception e)
+        {
+            temp = 1;
+            System.out.println(e.getMessage());
+        }
+        if(temp==0)
         {
             return s.get(s.size()-1);
         }
-        else
-        {
-            Exception e = new Exception("Undeflow!!!");
-            throw e;
-        }
-
+        return null;
     }
 }
 
@@ -43,6 +67,8 @@ class Stack
 {
     public static void main(String args[])
     {
-        MyStack<Integer> 
+        MyStack<Integer> s = new MyStack<>();  
+        s.peek();
+        
     }
 }
